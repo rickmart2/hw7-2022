@@ -4,7 +4,9 @@ window.addEventListener("load", function() {
 	console.log("Good job opening the window");
 	video = document.getElementById("player1");
 	video.autoplay = false;
+	console.log("Auto play is set to false");
 	video.look = false;
+	console.log("Loop is set to false");
 
 });
 
@@ -14,7 +16,7 @@ document.querySelector("#play").addEventListener("click", function() {
 });
 
 let slider_val = document.querySelector('#slider')
-document.getElementById("volume").innerHTML = slider_val.value
+document.getElementById("volume").innerHTML = slider_val.value + "%"
 
 document.querySelector("#pause").addEventListener("click", function() {
 	console.log("Pause Video");
@@ -28,7 +30,7 @@ document.querySelector("#pause").addEventListener("click", function() {
  
  
 	video.playbackRate=0.9*video.playbackRate
-	console.log("Playback speed: " + video.playbackRate)
+	console.log("Speed is: " + video.playbackRate)
  });
 
  document.querySelector("#faster").addEventListener("click", function() {
@@ -36,7 +38,7 @@ document.querySelector("#pause").addEventListener("click", function() {
  
  
 	video.playbackRate=1/0.9*video.playbackRate
-	console.log("Playback speed: " + video.playbackRate)
+	console.log("Speed is: " + video.playbackRate)
  });
 
  document.querySelector("#skip").addEventListener("click", function() {
