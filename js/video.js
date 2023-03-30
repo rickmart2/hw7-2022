@@ -58,12 +58,14 @@ document.querySelector("#pause").addEventListener("click", function() {
  });
 
  document.querySelector("#mute").addEventListener("click", function() {
-	console.log("Mute");
+	
 	if (video.muted === true) {
 		video.muted = false;
+		console.log("Unmute");
 	}
 	else {
 		video.muted = true;
+		console.log("Mute");
 	}
 	
 });
@@ -74,8 +76,12 @@ document.querySelector("#slider").addEventListener("change", function() {
  
 	let slider_val = document.querySelector('#slider');
 	document.getElementById("volume").innerHTML = slider_val.value;
-	console.log(slider_val.value);
+	console.log("The current value is " + slider_val.value/100);
+	thing = document.getElementById("volume");
+	per = "%";
+	console.log(thing + per);
 	video.volume = slider_val.value/100;
+	
 	
  });
 
